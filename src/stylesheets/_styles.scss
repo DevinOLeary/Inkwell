@@ -1,0 +1,78 @@
+ul, li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+body {
+  color: $default;
+}
+
+//text
+h1, h2 {
+  font-family: $header-font;
+  font-weight:lighter;
+  line-height: 1;
+}
+h3, h4, h5, p, li, a {
+  font-family: $body-font;
+  line-height: 1.5;
+  font-weight: lighter;
+}
+
+h1 {
+  font-size: 86px;
+}
+h2 {
+  font-size: 36px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+p, li, a {
+  font-size: 16px;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+button:focus {
+  outline: none;
+}
+a:hover, button:hover {
+  cursor: pointer;
+}
+
+.inverse {
+  color: $inverse;
+}
+
+.nav-bar {
+  background-color: $inverse;
+}
+
+//features
+
+.section-header {
+  hr {
+    border: 1px solid $default;
+  }
+}
+
+
+
+//buttons
+
+.inverse-button {
+  background-color: $clear;
+  border: 2px solid $inverse;
+  color: $inverse;
+}
+
+.button-flat {
+  background: none;
+  border: none;
+  color: inherit;
+}

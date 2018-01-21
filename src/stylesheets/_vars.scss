@@ -1,0 +1,11 @@
+$white: rgb(255,255,255);
+$grey: rgb(74,74,74);
+$clear: rgba(0,0,0,0);
+
+
+$default: $grey;
+$inverse: $white;
+
+$header-font: 'Yesteryear';
+$body-font: 'Josefin sans';
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:400|Yesteryear');

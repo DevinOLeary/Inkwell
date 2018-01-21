@@ -1,0 +1,125 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h4 {
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  th {
+    width: 70%;
+  }
+}
+tbody {
+  tr {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+  }
+}
+
+.row {
+  flex-direction: row;
+  align-items: center;
+}
+.column {
+  flex-direction: column;
+  align-items: center;
+}
+
+.spread {
+  justify-content: space-between;
+}
+.center {
+  justify-content: center;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.text-container {
+  justify-content: center;
+  text-align: left;
+  align-items: center;
+  min-height: 250px;
+  flex-direction: column;
+  padding: 5vw;
+    h2 {
+      margin: 50px;
+    }
+    p{
+      width: 90%;
+      max-width: 400px;
+    }
+}
+
+.text-center {
+  text-align: center;
+}
+
+//features
+
+.nav-menu {
+  margin-top: 10px;
+  margin-right: 5%;
+  z-index: 200;
+  li {
+    padding: 5px;
+  }
+}
+
+.section-header {
+  th {
+    h3 {
+      margin: 0;
+    }
+    hr {
+      margin: 0;
+      width: 100%;
+    }
+  }
+}
+
+.floating-underline {
+  position: absolute;
+  bottom: 30%;
+  width: 35%;
+  left: 2px;
+  transition: .7s;
+}
+.active-food {
+  left:202px;
+}
+
+.menu-list-item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
+
+.logo-button {
+  z-index: 90;
+}
+
+.inverse-button {
+  padding: 10px;
+}
+.button-flat {
+  margin: 0px 50px;
+}
+
+
+
+@media (min-width: 600px){
+  .text-container p {
+    width: 60%;
+    max-width: 600px;
+  }
+}

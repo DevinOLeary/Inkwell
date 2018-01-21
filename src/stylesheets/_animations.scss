@@ -1,0 +1,38 @@
+.below-fold-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  opacity: 0;
+  height: 30px;
+  transition: .4s;
+}
+
+.show-nav {
+  opacity: 1;
+}
+
+// coffee cup
+#one {
+  stroke-dasharray: 10 9;
+  animation: dash 1.5s ease-in infinite;
+}
+#two {
+   stroke-dasharray: 10 9;
+  animation: dash 1.5s .6s linear infinite;
+}
+#three {
+   stroke-dasharray: 10 9;
+  animation: dash 1.5s .3s linear infinite;
+}
+
+@keyframes dash {
+  0% {stroke-dashoffset: 5;
+    opacity: .1;
+  }
+  50% {stroke-dashoffset: -5;
+    opacity: .8}
+  100% {stroke-dashoffset: -10;
+   opacity: 0}
+}
