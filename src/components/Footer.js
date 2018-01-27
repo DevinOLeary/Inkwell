@@ -39,7 +39,7 @@ const phoneAddress = (
   <div className="text-center" style={footerItemWidth}>
     <a href="tel:+8128222925"><h4>(812) 822-2925</h4></a>
     <br/>
-    <a href="https://www.google.com/maps/place/105+N+College+Ave,+Bloomington,+IN+47404/data=!4m2!3m1!1s0x886c66de7482a3cd:0xc861f75e9711c78a?sa=X&ved=0ahUKEwishO65vM7YAhXl4IMKHSlzCxwQ8gEIKDAA"><address><h4>105 N. College Ave.
+    <a href="https://www.google.com/maps/place/105+N+College+Ave,+Bloomington,+IN+47404/data=!4m2!3m1!1s0x886c66de7482a3cd:0xc861f75e9711c78a?sa=X&ved=0ahUKEwishO65vM7YAhXl4IMKHSlzCxwQ8gEIKDAA" target="_blank" rel="noopener noreferrer"><address><h4>105 N. College Ave.
 Bloomington, Indiana 47404</h4></address></a>
   </div>
 );

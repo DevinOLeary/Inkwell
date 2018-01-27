@@ -11,6 +11,7 @@ module.exports = {
         baseUrl:`dev-inkwellcafe.pantheonsite.io`,
         protocol: `http`,
         hostingWPCOM: false,
+        verboseOutput: true,
         useACF: true
       },
     },
