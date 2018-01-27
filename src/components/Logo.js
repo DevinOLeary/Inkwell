@@ -1,10 +1,8 @@
 import React from 'react';
 import {Link} from 'react-scroll';
-<<<<<<< HEAD
+
 import inkwellLogo from '../../public/inkwell-logo.png';
-=======
 import inkwellLogo from '../assets/inkwell-logo.png';
->>>>>>> 54ec394f68de657434d1785ca9dc86927158d59d
 
 
 
