@@ -50,14 +50,6 @@ class MenuBlock extends React.Component {
               </Media>
             </hgroup>
           </div>
-          {/*<TransitionGroup className="container center">
-            {
-            this.state.activeTab === 'drinks' ?
-              <MenuType type={'drinks'}/>
-              :
-              <MenuType type={'food'}/>
-            }
-          </TransitionGroup>*/}
         </section>
       </div>
     )
