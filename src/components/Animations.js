@@ -9,7 +9,7 @@ module.exports = {
   },
   animateItemIn: (target) => {
     const item = document.getElementById(target);
-    TweenLite.fromTo(item, .8, {opacity: 0, y: 20}, {opacity: 1, y: 0, delay: .3});
+    TweenLite.fromTo(item, .8, {opacity: 0, y: 20}, {opacity: 1, y: 0, delay: .5});
   },
   animateBlock: (target, type) => {
     type === 'food' ? (

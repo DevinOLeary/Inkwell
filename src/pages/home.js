@@ -47,7 +47,7 @@ class HomePage extends React.Component{
         </Element>
           {/* menu container */}
         <section className="container">
-          <MenuBlock data={this.props.data}/>
+          <MenuBlock/>
         </section>
         <br/>
         <br/>
@@ -80,29 +80,3 @@ class HomePage extends React.Component{
 }
 
 export default HomePage
-
-export const query = graphql`
-  query menuContent {
-    allWordpressWpDrinks {
-      edges {
-        node {
-          title
-            acf {
-              menu_items
-              menu_subheader
-            }
-        }
-      }
-    }
-    allWordpressWpFood {
-      edges {
-        node {
-          title
-            acf {
-              menu_items
-            }
-        }
-      }
-    }
-  }
-`

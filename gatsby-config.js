@@ -5,16 +5,7 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
-    {
-      resolve: "gatsby-source-wordpress",
-      options: {
-        baseUrl:`dev-inkwellcafe.pantheonsite.io`,
-        protocol: `http`,
-        hostingWPCOM: false,
-        verboseOutput: true,
-        useACF: true
-      },
-    },
+    `gatsby-plugin-netlify-cms`,
     `gatsby-transformer-sharp`,
    `gatsby-plugin-sharp`,
    `gatsby-plugin-glamor`
