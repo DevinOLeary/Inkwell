@@ -2,7 +2,7 @@ import React from 'react';
 
 const itemDimensions = {
   width: "40%",
-  minWidth: "300px",
+  minWidth: "300px"
 }
 
 function pairsArray(str){

@@ -61,6 +61,29 @@ a:hover, button:hover {
   }
 }
 
+.divider-colored {
+  #flag-1 {
+    background-color: $orange;
+  }
+  #flag-2 {
+    background-color: $purple;
+  }
+  #flag-3 {
+    background-color: $yellow;
+  }
+}
+
+
+#topList li:nth-child(1){
+  color: $yellow;
+}
+#topList li:nth-child(2) {
+  color: $orange;
+}
+#topList li:nth-child(3) {
+  color: $purple;
+}
+
 
 
 //buttons
@@ -75,4 +98,15 @@ a:hover, button:hover {
   background: none;
   border: none;
   color: inherit;
+}
+
+.button-action {
+  padding: 8px;
+  border: 2px solid $default;
+  background: $inverse;
+  color: $default;
+}
+.button:hover {
+  background: $button-gradient;
+  color: $inverse;
 }
