@@ -14,11 +14,7 @@ class MenuBlock extends React.Component {
     }
   }
 
-  handleClick(target){
-    this.setState({activeTab: target});
-  }
   render(){
-    const activeTab = this.state.activeTab;
     const buttonContainer = {
       position: "relative",
       width: "300px"
@@ -37,8 +33,7 @@ class MenuBlock extends React.Component {
       backgroundSize: 'cover',
       height: '100%',
       width: '40%'
-    }
-    const menuContent = this.state.activeTab === "drinks" ? this.props.data.allWordpressWpDrinks.edges : this.props.data.allWordpressWpFood.edges;
+
 
     return(
       <div className="container center row full-width">
@@ -55,14 +50,14 @@ class MenuBlock extends React.Component {
               </Media>
             </hgroup>
           </div>
-          <TransitionGroup className="container center">
+          {/*<TransitionGroup className="container center">
             {
             this.state.activeTab === 'drinks' ?
-              <MenuType type={'drinks'} menuContent={menuContent}/>
+              <MenuType type={'drinks'}/>
               :
-              <MenuType type={'food'} menuContent={menuContent}/>
+              <MenuType type={'food'}/>
             }
-          </TransitionGroup>
+          </TransitionGroup>*/}
         </section>
       </div>
     )
