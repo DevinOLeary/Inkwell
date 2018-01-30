@@ -45,9 +45,9 @@ class MenuBlock extends React.Component {
               <button className="button-flat"><h3>drinks</h3></button>
               <button className="button-flat"><h3>food</h3></button>
               <Media query="(min-width: 600px)">
-                {matches =>
+                {/*{matches =>
                   matches ? <hr className={`floating-underline ${activeTab === "food" ? "active-food" : ""}`}/> : <div/>
-              }
+              }*/}
               </Media>
             </hgroup>
           </div>
