@@ -1,15 +1,58 @@
 backend:
-  name: github
-  repo: DevinOLeary/Inkwell
+  name: "github"
+  repo: "DevinOLeary/Inkwell"
 
-media_folder: static/assets
+media_folder: "src/assets"
 
 collections:
-  - name: blog
-    label: Blog
-    folder: blog
+  - name: "blog"
+    label: "Blog"
+    folder: "blog"
     create: true
     fields:
-      - { name: path, label: Path }
-      - { name: date, label: Date, widget: date }
-      - { name: title, label: Title }
+      - { name: "path", label: "Path" }
+      - { name: "date", label: "Date", widget: "date" }
+      - { name: "title", label: "Title" }
+
+  - name: "drink_menu"
+    label: "Drink Menu"
+    folder: "menus"
+    create: true
+    filter: {
+      field: "category",
+      value: "drinks"
+      }
+    fields:
+      - {
+        label: "Title",
+        name: "title",
+        widget: "string"
+        }
+      - {
+        label: "Category",
+        name: "category",
+        widget: "select",
+        options: ["drinks", "food"]
+        } 
+
+  - name: "food_menu"
+    label: "Food Menu"
+    folder: "menus"
+    create: true
+    filter: {
+      field: "category",
+      value: "food"
+      }
+    fields: {
+      - {
+        label: "Title",
+        name: "title",
+        widget: "string"
+        }
+      - {
+        label: "Category",
+        name: "category",
+        widget: "select",
+        options: ["drinks", "food"]
+        }
+      }
