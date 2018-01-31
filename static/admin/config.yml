@@ -3,7 +3,7 @@ backend:
   repo: "DevinOLeary/Inkwell"
 
 media_folder: "static/img"
-public_folder: "/static/img"
+public_folder: "/src/assets"
 
 collections:
   - name: "blog"
