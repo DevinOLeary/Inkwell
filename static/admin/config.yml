@@ -10,13 +10,14 @@ collections:
     folder: "blog"
     create: true
     fields:
-      - { name: "path", label: "Path" }
-      - { name: "date", label: "Date", widget: "date" }
-      - { name: "title", label: "Title" }
+      - {label: "Date", name: "date", widget: "date"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Author", name: "author", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
 
   - name: "drink_menu"
-    label: "Drink Menu"
-    folder: "menus"
+    label: "Drink Type"
+    folder: "drink_menus"
     create: true
     fields:
       - {
@@ -27,32 +28,20 @@ collections:
       - {
         label: "Optional Group Cost",
         name: "group_cost",
-        widget: "number"
+        widget: "number",
+        required: false
         }
-      - {
-        label: "Drink Item",
-        name: "drink_item",
-        widget: "list",
+      - label: "Drink Item"
+        name: "drink_item"
+        widget: "list"
         fields:
-        - {
-          label: "Menu Item",
-          name: "menu_item",
-          widget: "string"
-          }
-        - {
-          label: "Cost",
-          name: "item_cost",
-          widget: "number"}
-        - {
-          label: "Item Image",
-          name: "item_image",
-          widget: "image"
-          }
-        }
+          - {label: Name, name: item_name, widget: string}
+          - {label: Cost, name: item_cost, widget: number}
+          - {label: Image, name: item_image, widget: image}
 
   - name: "food_menu"
-    label: "Food Menu"
-    folder: "menus"
+    label: "Food Type"
+    folder: "food_menus"
     create: true
     fields:
       - {
@@ -63,14 +52,22 @@ collections:
       - {
         label: "Optional Group Cost",
         name: "group_cost",
-        widget: "number"
+        widget: "number",
+        required: false
         }
-      - {
-        label: "Food Item",
-        name: "food_item",
-        widget: "list",
+      - label: "Food Item"
+        name: "food_item"
+        widget: "list"
         fields:
-        - { label: "Menu Item", name: "menu_item", widget: "string"}
-        - { label: "Cost", name: "item_cost", widget: "number"}
-        - { label: "Item Image", name: "item_image", widget: "image"}
-        }
+          - {label: Name, name: item_name, widget: string}
+          - {label: Cost, name: item_cost, widget: number}
+          - {label: Image, name: item_image, widget: image}
+  - label: "Merch"
+    name: "merch"
+    folder: "merch"
+    create: true
+    fields:
+      - {label: "Item Name", name: "merch_item_name", widget: "string"}
+      - {label: "Item Cost", name: "merch_item-cost", widget: "number"}
+      - {label: "Description", name: "merch_item_description", widget: "text"}
+      - {label: "Item Image", name: "merch_item_image", widget: "image"}
