@@ -12,7 +12,7 @@ collections:
     fields:
       - {label: "Date", name: "date", widget: "date"}
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Author", name: "author", widget: "string"}
+      - {label: "Author", name: "author", widget: "string", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
 
   - name: "drink_menu"
@@ -69,5 +69,5 @@ collections:
     fields:
       - {label: "Item Name", name: "merch_item_name", widget: "string"}
       - {label: "Item Cost", name: "merch_item-cost", widget: "number"}
-      - {label: "Description", name: "merch_item_description", widget: "text"}
+      - {label: "Description", name: "merch_item_description", widget: "text", required: false}
       - {label: "Item Image", name: "merch_item_image", widget: "image"}
