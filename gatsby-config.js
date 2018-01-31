@@ -10,9 +10,30 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/drink_menus`,
-        name: "markdown-pages",
+        name: "drink_menus",
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/food_menus`,
+        name: "food_menus",
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/blog`,
+        name: "blog",
+      },
+    },
+    {
+     resolve: 'gatsby-source-filesystem',
+     options: {
+       path: `${__dirname}/static/img`,
+       name: 'images',
+     },
+   },
     `gatsby-transformer-sharp`,
    `gatsby-plugin-sharp`,
    `gatsby-plugin-glamor`
