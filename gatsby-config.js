@@ -34,7 +34,7 @@ module.exports = {
        name: 'images',
      },
    },
-    `gatsby-transformer-sharp`,
+   `gatsby-transformer-sharp`,
    `gatsby-plugin-sharp`,
    `gatsby-plugin-glamor`
   ],
