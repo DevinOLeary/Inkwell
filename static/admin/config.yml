@@ -18,41 +18,59 @@ collections:
     label: "Drink Menu"
     folder: "menus"
     create: true
-    filter: {
-      field: "category",
-      value: "drinks"
-      }
     fields:
       - {
-        label: "Title",
+        label: "Drink Type",
         name: "title",
         widget: "string"
         }
       - {
-        label: "Category",
-        name: "category",
-        widget: "select",
-        options: ["drinks", "food"]
-        } 
+        label: "Optional Group Cost",
+        name: "group_cost",
+        widget: "number"
+        }
+      - {
+        label: "Drink Item",
+        name: "drink_item",
+        widget: "list",
+        fields:
+        - {
+          label: "Menu Item",
+          name: "menu_item",
+          widget: "string"
+          }
+        - {
+          label: "Cost",
+          name: "item_cost",
+          widget: "number"}
+        - {
+          label: "Item Image",
+          name: "item_image",
+          widget: "image"
+          }
+        }
 
   - name: "food_menu"
     label: "Food Menu"
     folder: "menus"
     create: true
-    filter: {
-      field: "category",
-      value: "food"
-      }
-    fields: {
+    fields:
       - {
-        label: "Title",
+        label: "Food Type",
         name: "title",
         widget: "string"
         }
       - {
-        label: "Category",
-        name: "category",
-        widget: "select",
-        options: ["drinks", "food"]
+        label: "Optional Group Cost",
+        name: "group_cost",
+        widget: "number"
         }
-      }
+      - {
+        label: "Food Item",
+        name: "food_item",
+        widget: "list",
+        fields:
+        - { label: "Menu Item", name: "menu_item", widget: "string"}
+        - { label: "Cost", name: "item_cost", widget: "number"}
+        - { label: "Item Image", name: "item_image", widget: "image"}
+        }
