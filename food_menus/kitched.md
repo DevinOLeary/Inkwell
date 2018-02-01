@@ -1,7 +1,7 @@
 ---
 title: kitchen
 food_item:
-  - item_image: /static/img/inkwell-drink.jpg
+  - item_image: /src/assets/inkwell-door.jpg
     item_name: sandwich
 ---
 
