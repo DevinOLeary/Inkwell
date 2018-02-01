@@ -28,7 +28,6 @@ class HomePage extends React.Component{
               <li><h2>live well</h2></li>
             </ul>
           </Waypoint>
-        </ImageContainer>
           {/* blurb */}
         <TextContainer>
           <CoffeeCup/>
