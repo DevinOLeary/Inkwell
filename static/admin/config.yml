@@ -3,7 +3,6 @@ backend:
   repo: "DevinOLeary/Inkwell"
 
 media_folder: "static/img"
-public_folder: "/src/assets"
 
 collections:
   - name: "blog"
@@ -63,12 +62,29 @@ collections:
           - {label: Name, name: item_name, widget: string}
           - {label: Cost, name: item_cost, widget: number}
           - {label: Image, name: item_image, widget: image}
-  - label: "Merch"
-    name: "merch"
+  - name: "merch"
+    label: "Merch"
     folder: "merch"
     create: true
     fields:
-      - {label: "Item Name", name: "merch_name", widget: "string"}
-      - {label: "Item Cost", name: "merch_cost", widget: "number"}
-      - {label: "Description", name: "merch_description", widget: "text", required: false}
-      - {label: "Item Image", name: "merch_image", widget: "image"}
+      - {
+        label: "Item Name",
+        name: "title",
+        widget: "string"
+        }
+      - {
+        label: "Item Cost",
+        name: "merch_cost",
+        widget: "number"
+        }
+      - {
+        label: "Description",
+        name: "merch_description",
+        widget: text,
+        required: false
+        }
+      - {
+        label: "Image",
+        name: "image",
+        widget: "image"
+        }
