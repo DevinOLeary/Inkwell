@@ -9,28 +9,28 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `drink_menus`,
+        path: `${__dirname}/drink_menus`,
         name: "drink-menus",
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `food_menus`,
+        path: `${__dirname}/food_menus`,
         name: "food-menus",
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `blog`,
+        path: `${__dirname}/blog`,
         name: "blog",
       },
     },
     {
      resolve: 'gatsby-source-filesystem',
      options: {
-       path: `static/img`,
+       path: `${__dirname}/static/img`,
        name: 'images',
      },
    },
