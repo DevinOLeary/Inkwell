@@ -1,6 +1,6 @@
 ---
 title: test
 merch_cost: '0'
-image: /src/assets/inkwell-drink.jpg
+image: /static/img/inkwell-door.jpg
 ---
 
