@@ -63,6 +63,7 @@ collections:
           - {label: Name, name: item_name, widget: string}
           - {label: Cost, name: item_cost, widget: number}
           - {label: Image, name: item_image, widget: image}
+          
   - name: "merch"
     label: "Merch"
     folder: "merch"
