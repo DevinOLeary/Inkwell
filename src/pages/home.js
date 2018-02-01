@@ -10,9 +10,7 @@ import MenuBlock from '../components/MenuBlock';
 import MerchBlock from '../components/MerchBlock';
 import BlogBlock from '../components/BlogBlock';
 
-import CounterImage from '../assets/Inkwell-counter.jpg';
-import DoorImage from '../assets/Inkwell-door.jpg';
-import WindowImage from '../assets/Inkwell-window.jpg';
+
 import CoffeeCup from '../assets/CoffeeCup';
 import ColoredDivider from '../components/ColoredDivider';
 

@@ -4,7 +4,6 @@ import {TransitionGroup} from 'react-transition-group';
 
 import MenuType from './MenuType';
 
-import DrinkImage from '../assets/Inkwell-drink.jpg';
 
 class MenuBlock extends React.Component {
   constructor(props){
