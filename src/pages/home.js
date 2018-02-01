@@ -21,7 +21,6 @@ class HomePage extends React.Component{
       <div>
       {/* above the fold block*/}
         <Element name="top"/>
-        <ImageContainer image={CounterImage}>
           <Waypoint onEnter={Animations.animateListIn.bind(this, "topList")}>
             <ul id="topList">
               <li><h2>eat well</h2></li>
