@@ -1,6 +1,6 @@
 ---
-title: Cup
+merch_name: Cup
 merch_cost: '4'
-image: /static/img/inkwell-drink.jpg
+merch_image: /src/assets/inkwell-drink.jpg
 ---
 
