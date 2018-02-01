@@ -10,14 +10,14 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/drink_menus`,
-        name: "drink_menus",
+        name: "drink-menus",
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/food_menus`,
-        name: "food_menus",
+        name: "food-menus",
       },
     },
     {
@@ -34,6 +34,7 @@ module.exports = {
        name: 'images',
      },
    },
+   `gatsby-transformer-remark`,
    `gatsby-transformer-sharp`,
    `gatsby-plugin-sharp`,
    `gatsby-plugin-glamor`
