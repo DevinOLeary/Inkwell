@@ -27,6 +27,12 @@ collections:
         widget: "string"
         }
       - {
+        label: "Menu Type",
+        name: "menu_type",
+        widget: "hidden",
+        default: "drinks"
+        }
+      - {
         label: "Optional Group Cost",
         name: "group_cost",
         widget: "number",
@@ -51,6 +57,12 @@ collections:
         widget: "string"
         }
       - {
+        label: "Menu Type",
+        name: "menu_type",
+        widget: "hidden",
+        default: "food"
+        }
+      - {
         label: "Optional Group Cost",
         name: "group_cost",
         widget: "number",
@@ -63,7 +75,7 @@ collections:
           - {label: Name, name: item_name, widget: string}
           - {label: Cost, name: item_cost, widget: number}
           - {label: Image, name: item_image, widget: image}
-          
+
   - name: "merch"
     label: "Merch"
     folder: "merch"
@@ -73,6 +85,12 @@ collections:
         label: "Item Name",
         name: "title",
         widget: "string"
+        }
+      - {
+        label: "Category",
+        name: "merch",
+        widget: "hidden",
+        default: "food"
         }
       - {
         label: "Item Cost",

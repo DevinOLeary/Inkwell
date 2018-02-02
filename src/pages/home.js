@@ -17,6 +17,8 @@ import ColoredDivider from '../components/ColoredDivider';
 
 class HomePage extends React.Component{
   render(){
+    const edges = this.props.data.allMarkdownRemark.edges;
+    console.log(edges);
     return(
       <div>
       {/* above the fold block*/}
@@ -76,3 +78,19 @@ class HomePage extends React.Component{
 }
 
 export default HomePage
+
+
+export const query = graphql `
+  query HomeQuery {
+    allMarkdownRemark {
+      edges {
+        node {
+          html
+          frontmatter {
+            title
+          }
+        }
+      }
+    }
+  }
+`
