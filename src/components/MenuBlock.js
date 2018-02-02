@@ -27,7 +27,7 @@ class MenuBlock extends React.Component {
     }
 
     const menuImage = {
-      backgroundImage: `url(${DrinkImage})`,
+
       backgroundPosition: 'center',
       backgroundSize: 'cover',
       height: '100%',
