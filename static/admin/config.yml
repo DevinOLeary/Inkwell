@@ -27,8 +27,8 @@ collections:
         widget: "string"
         }
       - {
-        label: "Menu Type",
-        name: "menu_type",
+        label: "Category",
+        name: "content_category",
         widget: "hidden",
         default: "drinks"
         }
@@ -57,8 +57,8 @@ collections:
         widget: "string"
         }
       - {
-        label: "Menu Type",
-        name: "menu_type",
+        label: "Category",
+        name: "content_category",
         widget: "hidden",
         default: "food"
         }
@@ -88,9 +88,9 @@ collections:
         }
       - {
         label: "Category",
-        name: "merch",
+        name: "content_category",
         widget: "hidden",
-        default: "food"
+        default: "merch"
         }
       - {
         label: "Item Cost",

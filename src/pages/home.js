@@ -88,6 +88,7 @@ export const query = graphql `
           html
           frontmatter {
             title
+            content_category
           }
         }
       }
