@@ -15,7 +15,6 @@ class BlogBlock extends React.Component{
   loadMore = () => {
     const currentPosts = this.state.loadMorePosts;
     const addition = this.props.post.length - currentPosts > 1 ? 2 : 1;
-    console.log(addition)
     return this.setState({loadMorePosts: currentPosts + addition});
   }
   render(){
@@ -38,6 +37,7 @@ class BlogBlock extends React.Component{
             {externalPost ? <p dangerouslySetInnerHTML={{ __html: featuredPostContent.html }}/>
               : <p>{featuredPostContent.excerpt}</p>
           }
+            <p dangerouslySetInnerHTML={{ __html: featuredPostContent.html }}/>
           </hgroup>
           <aside><img src={featuredPost.featuredImage.file.url} alt={featuredPost.blogTitle} style={imageStyle}/></aside>
         </article>
