@@ -50,8 +50,8 @@ class MenuBlock extends React.Component {
     const subheaderStyle = {
       marginTop: '-20px'
     }
-    const drinkContent = this.props.data[0].node.menuTypeChildren;
-    const foodContent = this.props.data[1].node.menuTypeChildren;
+    const drinkContent = this.props.data[1].node.menuTypeChildren;
+    const foodContent = this.props.data[0].node.menuTypeChildren;
     const foodItemArray = menuArray(foodContent);
     const activeItem = foodItemArray.filter((item) => {
       return item.itemName === this.state.activeMenuItem;
