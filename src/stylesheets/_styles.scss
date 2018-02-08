@@ -28,15 +28,16 @@ h2 {
 h3 {
   font-size: 24px;
 }
-h4 {
+h4, button {
   font-size: 18px;
 }
-p, li, a {
+p, li{
   font-size: 16px;
 }
 a {
-  text-decoration: none;
-  color: inherit;
+  text-decoration: underline;
+  color: $default;
+  font-size: 18px;
 }
 button:focus {
   outline: none;
@@ -51,6 +52,11 @@ a:hover, button:hover {
 
 .nav-bar {
   background-color: $inverse;
+  .nav-menu {
+    a {
+      text-decoration: none;
+    }
+  }
 }
 
 //features
@@ -86,6 +92,7 @@ a:hover, button:hover {
 
 
 
+
 //buttons
 
 .inverse-button {
@@ -105,6 +112,14 @@ a:hover, button:hover {
   border: 2px solid $default;
   background: $inverse;
   color: $default;
+  transition: color .3s;
+}
+
+.button-action:hover{
+  background: $button-gradient;
+  color: $inverse;
+  border: none;
+  padding: 10px;
 }
 .button:hover {
   background: $button-gradient;

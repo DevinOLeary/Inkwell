@@ -8,7 +8,7 @@ $yellow: #E2EF58;
 
 $default: $grey;
 $inverse: $white;
-$button-gradient: linear-gradient($purple, $orange);
+$button-gradient: linear-gradient(90deg, $purple 0%, $orange 100%);
 
 $header-font: 'Yesteryear';
 $body-font: 'Josefin sans';

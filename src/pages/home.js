@@ -9,20 +9,23 @@ import Animations from '../components/Animations';
 import MenuBlock from '../components/MenuBlock';
 import MerchBlock from '../components/MerchBlock';
 import BlogBlock from '../components/BlogBlock';
-
+import Map from '../components/Map';
 
 import CoffeeCup from '../assets/CoffeeCup';
 import ColoredDivider from '../components/ColoredDivider';
 
-
 class HomePage extends React.Component{
   render(){
-    const edges = this.props.data.allMarkdownRemark.edges;
-    console.log(edges);
+    const menuContentNodes = this.props.data.allContentfulMenuCategory.edges;
+    const merchContentNodes = this.props.data.allContentfulMerchItem.edges;
+    const headerImage = this.props.data.allContentfulHeaderImage.edges.map((node) => node.node.image.file.url);
+    const aboutSection = this.props.data.allContentfulAboutSection.edges.map((node) => node.node.sectionContent.childMarkdownRemark.html);
+    const blogPostNodes = this.props.data.allContentfulBlogPost.edges;
     return(
       <div>
       {/* above the fold block*/}
         <Element name="top"/>
+        <ImageContainer image={headerImage[0]}>
           <Waypoint onEnter={Animations.animateListIn.bind(this, "topList")}>
             <ul id="topList">
               <li><h2>eat well</h2></li>
@@ -30,12 +33,11 @@ class HomePage extends React.Component{
               <li><h2>live well</h2></li>
             </ul>
           </Waypoint>
+        </ImageContainer>
           {/* blurb */}
         <TextContainer>
           <CoffeeCup/>
-          <br/>
-          <br/>
-          <p>Made from scratch baked goods, high-quality coffee program, delicious and fresh breakfast and lunch.</p>
+          <p>Made from scratch baked goods, superior coffee program, breakfast and lunch options made with only the highest quality ingredients.</p>
         </TextContainer>
         <ColoredDivider/>
         <Element name="menuBlock">
@@ -45,33 +47,34 @@ class HomePage extends React.Component{
         </Element>
           {/* menu container */}
         <section className="container">
-          <MenuBlock/>
+          <MenuBlock data={menuContentNodes}/>
         </section>
         <br/>
         <br/>
         <ColoredDivider/>
         <TextContainer>
-          <Element name="about"><h3>who we are and where we&apos;re going</h3></Element>
-          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. </p>
+          <Element name="about"/>
+          <div dangerouslySetInnerHTML={{ __html: aboutSection }} className="full-width container column"/>
         </TextContainer>
+        <ColoredDivider/>
         <Element name="merchBlock">
           <Waypoint onEnter={Animations.animateItemIn.bind(this, "merch")}>
             <h1 id="merch" className="container-title">merch</h1>
           </Waypoint>
         </Element>
-        <MerchBlock/>
+        <MerchBlock items={merchContentNodes}/>
         <ColoredDivider/>
         <Element name="blogBlock">
-          <BlogBlock/>
+          <BlogBlock post={blogPostNodes}/>
         </Element>
         <ColoredDivider/>
         {/*contact section*/}
         <Element name="contact">
           <Waypoint onEnter={Animations.animateItemIn.bind(this, "contact")}>
-            <h1 id="contact">get in touch!</h1>
+            <h1 id="contact" className="container-title">get in touch!</h1>
           </Waypoint>
         </Element>
-        <h3>Map</h3>
+        <Map/>
       </div>
     );
   }
@@ -82,13 +85,76 @@ export default HomePage
 
 export const query = graphql `
   query HomeQuery {
-    allMarkdownRemark {
+    allContentfulBlogPost {
       edges {
         node {
-          html
-          frontmatter {
-            title
-            
+          blogTitle
+          externalArticle
+          featuredImage {
+            file {
+              url
+            }
+          }
+          blogContent {
+            childMarkdownRemark {
+              excerpt(pruneLength: 250)
+              html
+            }
+          }
+        }
+      }
+    }
+    allContentfulMenuCategory {
+      edges {
+        node {
+          categoryTitle
+          menuTypeChildren {
+            typeName
+            groupCost
+            childItems {
+              itemName
+              itemCost
+              itemImage {
+               file {
+                url
+              }
+              }
+            }
+          }
+        }
+      }
+    }
+    allContentfulMerchItem {
+      edges {
+        node {
+          merchName
+          merchCost
+          merchImage {
+            file {
+              url
+            }
+          }
+        }
+      }
+    }
+    allContentfulHeaderImage {
+      edges {
+        node {
+          image {
+            file {
+              url
+            }
+          }
+        }
+      }
+    }
+    allContentfulAboutSection {
+      edges {
+        node {
+          sectionContent {
+            childMarkdownRemark {
+              html
+            }
           }
         }
       }

@@ -4,8 +4,11 @@ import React from 'react';
 
 class CoffeeCup extends React.Component {
   render(){
+    const coffeeCupStyle={
+      margin: '5vw'
+    }
     return (
-      <svg width="70px" height="70px" viewBox="0 0 49 50" version="1.1">
+      <svg width="70px" height="70px" viewBox="0 0 49 50" version="1.1" style={coffeeCupStyle}>
           <title>Coffee icon</title>
           <desc>Created with Sketch.</desc>
           <defs>

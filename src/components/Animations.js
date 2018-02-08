@@ -18,5 +18,8 @@ module.exports = {
     : (
       TweenLite.fromTo(target, .8, {opacity: 0, x: -100}, {opacity: 1, x: 0, delay: .01})
     )
+  },
+  animateImage: (target) => {
+    TweenLite.fromTo(target, .8, {opacity: 0, x: 100}, {opacity: 1, x: 0, delay: .01})
   }
 }

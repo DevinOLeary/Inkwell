@@ -5,33 +5,11 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
-    `gatsby-plugin-netlify-cms`,
     {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/drink_menus`,
-        name: "drink-menus",
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/food_menus`,
-        name: "food-menus",
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/blog`,
-        name: "blog",
-      },
-    },
-    {
-     resolve: 'gatsby-source-filesystem',
+     resolve: `gatsby-source-contentful`,
      options: {
-       path: `${__dirname}/static/img`,
-       name: 'images',
+       spaceId: `3ydoceujf2h5`,
+       accessToken: `c5fd9132e9dbb1aaaceacc7b47e3be6b8615ab28a835ad5e6f28abbed639669d`
      },
    },
    `gatsby-transformer-remark`,
