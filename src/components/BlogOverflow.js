@@ -26,7 +26,7 @@ const BlogOverflow = (props) => {
           {featuredImage && <img src={featuredImage} alt={post.blogTitle} className="image-featured"/>}
           <br/>
           <br/>
-          <h4>{post.blogTitle}</h4>
+          <h3 className="removed-margin">{post.blogTitle}</h3>
           {externalPost ? <p dangerouslySetInnerHTML={{ __html: postContent.html }}/>
             : <div>
                 <p>{postContent.excerpt}</p>

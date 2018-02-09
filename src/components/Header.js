@@ -60,7 +60,7 @@ const DesktopHeader = (props) => (
             )
             :
             (
-              <div className="container row spread">
+              <div className="container row">
                 <Logo style={logoMobile}/>
                 <NavItems/>
               </div>

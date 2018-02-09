@@ -54,7 +54,7 @@ table {
   justify-content: center;
   text-align: left;
   align-items: center;
-  min-height: 450px;
+  min-height: 350px;
   flex-direction: column;
     h2 {
       margin: 50px;
@@ -73,6 +73,9 @@ table {
 
 .text-center {
   text-align: center;
+}
+.removed-margin {
+  margin: 0;
 }
 
 //features
