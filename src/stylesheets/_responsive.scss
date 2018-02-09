@@ -14,5 +14,9 @@
   p, li {
     font-size: 18px;
   }
+  .text-container p {
+    max-width: 600px;
+    min-width: 300px;
+  }
 
 }

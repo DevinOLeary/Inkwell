@@ -8,10 +8,10 @@ const Template= (props) => {
   return (
     <div className="container column">
       <Helmet title={`Your Blog Name - ${post.blogTitle}`} />
-      <div className="container text-container column">
+      <div className="container column full-width">
         <Link to={'/home/'}>back</Link>
         <h3>{post.blogTitle}</h3>
-        <div dangerouslySetInnerHTML={{ __html: post.blogContent.childMarkdownRemark.html }} />
+        <div dangerouslySetInnerHTML={{ __html: post.blogContent.childMarkdownRemark.html }} className="text-container"/>
       </div>
     </div>
   );

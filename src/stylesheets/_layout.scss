@@ -152,13 +152,3 @@ table {
       background-color: blue;
     }
 }
-
-
-
-@media (min-width: 600px){
-  .text-container p {
-    width: 60%;
-    max-width: 600px;
-    min-width: 300px;
-  }
-}
