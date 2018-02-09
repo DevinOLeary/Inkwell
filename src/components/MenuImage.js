@@ -11,7 +11,6 @@ const MenuImage = (props)=> {
     width: '40%'
   }
   return(
-
     <section style={menuImage}/>
   );
 }

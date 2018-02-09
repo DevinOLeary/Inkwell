@@ -5,6 +5,7 @@ import {TransitionGroup} from 'react-transition-group';
 import drinkImage from '../assets/Inkwell-drink.jpg';
 import MenuType from './MenuType';
 import MenuImage from './MenuImage';
+import FadeIn from './FadeIn';
 
 function menuArray(food){
   const arr = [];
