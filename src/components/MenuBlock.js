@@ -6,6 +6,7 @@ import drinkImage from '../assets/Inkwell-drink.jpg';
 import MenuType from './MenuType';
 import MenuImage from './MenuImage';
 import FadeIn from './FadeIn';
+import Texture from '../assets/seamless_paper_texture.jpg';
 
 function menuArray(food){
   const arr = [];
@@ -46,7 +47,8 @@ class MenuBlock extends React.Component {
       boxShadow: "1px 0px 5px",
       width: "60%",
       minWidth: "400px",
-      justifyContent: "flex-start"
+      justifyContent: "flex-start",
+      background: `url(${Texture})`
     }
     const subheaderStyle = {
       marginTop: '-20px'
