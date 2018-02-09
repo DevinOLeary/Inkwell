@@ -1,6 +1,7 @@
 import React from 'react';
 import Media from 'react-media';
 import {Link} from 'react-scroll';
+import {Link as GatsbyLink} from 'gatsby-link';
 
 import Logo from '../components/Logo';
 
@@ -36,26 +37,38 @@ const NavItems = () =>(
 
 const DesktopHeader = (props) => (
   <header className="nav-bar">
-    <Media query="(min-width: 600px)">
-      {matches =>
-        matches ? (
-          <div>
-            <div className="container row spread">
-              <Logo style={logoDesktop}/>
-              <NavItems/>
-            </div>
-            <h3 style={titleText}>{props.data.site.siteMetadata.title}</h3>
-          </div>
-        )
-        :
-        (
+    {
+      props.location.pathname !== '/home/' ?
+        (<div>
           <div className="container row spread">
-            <Logo style={logoMobile}/>
-            <NavItems/>
+            <Logo style={logoDesktop}/>
           </div>
-        )
-      }
-    </Media>
+          <h3 style={titleText}>{props.data.site.siteMetadata.title}</h3>
+        </div>)
+      :
+      (
+        <Media query="(min-width: 600px)">
+          {matches =>
+            matches ? (
+              <div>
+                <div className="container row spread">
+                  <Logo style={logoDesktop}/>
+                  <NavItems/>
+                </div>
+                <h3 style={titleText}>{props.data.site.siteMetadata.title}</h3>
+              </div>
+            )
+            :
+            (
+              <div className="container row spread">
+                <Logo style={logoMobile}/>
+                <NavItems/>
+              </div>
+            )
+          }
+        </Media>
+      )
+    }
   </header>
 )
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'gatsby-link';
 
 import BlogOverflow from './BlogOverflow';
 class BlogBlock extends React.Component{
@@ -36,7 +37,10 @@ class BlogBlock extends React.Component{
           <hgroup className="container column">
             <h3>{featuredPost.blogTitle}</h3>
             {externalPost ? <p dangerouslySetInnerHTML={{ __html: featuredPostContent.html }}/>
-              : <div className="container column"><p>{featuredPostContent.excerpt}</p><button className="button-flat">read more</button></div>
+              : <div className="container column">
+                  <p>{featuredPostContent.excerpt}</p>
+                  <Link to={`/posts/${featuredPost.blogTitle}`}>read more</Link>
+                </div>
           }
           </hgroup>
           {featuredImage && <aside><img src={featuredPost.featuredImage.file.url} alt={featuredPost.blogTitle} style={imageStyle}/></aside>}

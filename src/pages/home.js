@@ -89,6 +89,7 @@ export const query = graphql `
       edges {
         node {
           blogTitle
+          id
           externalArticle
           featuredImage {
             file {

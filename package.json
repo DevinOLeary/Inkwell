@@ -6,6 +6,7 @@
   "dependencies": {
     "gatsby": "^1.9.164",
     "gatsby-link": "^1.6.34",
+    "gatsby-plugin-catch-links": "^1.0.15",
     "gatsby-plugin-glamor": "^1.6.10",
     "gatsby-plugin-react-helmet": "^1.0.8",
     "gatsby-plugin-sass": "^1.0.15",
@@ -22,7 +23,8 @@
     "react-parallax": "^1.6.0",
     "react-scroll": "^1.7.6",
     "react-transition-group": "^2.2.1",
-    "react-waypoint": "^8.0.0"
+    "react-waypoint": "^8.0.0",
+    "slash": "^1.0.0"
   },
   "keywords": [
     "gatsby"

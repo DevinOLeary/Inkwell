@@ -1,6 +1,7 @@
 import React from 'react';
 import {Link} from 'react-scroll';
 import {TransitionGroup} from 'react-transition-group';
+import {Link as GatsbyLink} from 'gatsby-link';
 
 import FadeIn from './FadeIn';
 const BlogOverflow = (props) => {
@@ -27,7 +28,10 @@ const BlogOverflow = (props) => {
           <br/>
           <h4>{post.blogTitle}</h4>
           {externalPost ? <p dangerouslySetInnerHTML={{ __html: postContent.html }}/>
-            : <div><p>{postContent.excerpt}</p><a>read</a></div>
+            : <div>
+                <p>{postContent.excerpt}</p>
+                <GatsbyLink to={`/posts/${post.blogTitle}`}><a>read</a></GatsbyLink>
+              </div>
           }
         </li>
       </FadeIn>

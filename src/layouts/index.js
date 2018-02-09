@@ -35,7 +35,7 @@ class TemplateWrapper extends React.Component {
       this.setState({menuShow: false});
     }
   }
-  
+
 
   render(){
     const visible = this.state.menuShow;
@@ -50,12 +50,12 @@ class TemplateWrapper extends React.Component {
         />
         {/* display header when not at root url */}
         {this.props.location.pathname !== "/" ?
-          <Header data={this.props.data}/>
+          <Header data={this.props.data} location={this.props.location}/>
           :
           <div/>
         }
           <div className={`below-fold-nav ${visible ? 'show-nav' : ''}`}>
-            <Header data={this.props.data}/>
+            <Header data={this.props.data} location={this.props.location}/>
           </div>
 
         <div ref={(body) => {this.body = body; }}>
