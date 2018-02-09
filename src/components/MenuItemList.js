@@ -1,8 +1,10 @@
 import React from 'react';
+import Media from 'react-media';
 
 const itemDimensions = {
   width: "40%",
-  minWidth: "300px"
+  minWidth: "300px",
+  marginBottom: "15px"
 }
 
 const MenuItemList = (props) => (
@@ -20,7 +22,14 @@ const MenuItemList = (props) => (
     <tbody className="container center column">
       {props.items.map((item) => (
         <tr key={item.itemName}>
-          <td>{props.type === 'food' ? <a href="#" onClick={props.handleFoodImage}>{item.itemName}</a> : item.itemName}</td>
+          <Media query="(min-width: 700px)">
+            {matches =>
+              matches ?
+              <td>{props.type === 'food' ? <a href="#" onClick={props.handleFoodImage}>{item.itemName}</a> : item.itemName}</td>
+              :
+              <td>{item.itemName}</td>
+            }
+          </Media>
           <td>{!props.subheader && `$`}{item.itemCost}</td>
         </tr>
       ))}
