@@ -27,11 +27,11 @@ const titleText = {
 }
 const NavItems = () =>(
   <ul className="container row nav-menu">
-    <Link to="menuBlock" smooth={true} offset={-100}><li>menu</li></Link>
-    <Link to="about" smooth={true} offset={-100}><li>about</li></Link>
+    <Link to="menuBlock" smooth={true} offset={-70}><li>menu</li></Link>
+    <Link to="about" smooth={true} offset={-210}><li>about</li></Link>
     <Link to="merchBlock" smooth={true} offset={-120}><li>merch</li></Link>
     <Link to="blogBlock" smooth={true} offset={-220}><li>blog</li></Link>
-    <Link to="contact" smooth={true} offset={200}><li>contact</li></Link>
+    <Link to="contact" smooth={true} offset={-120}><li>contact</li></Link>
   </ul>
 )
 
