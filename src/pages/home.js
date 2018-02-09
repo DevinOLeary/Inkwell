@@ -10,6 +10,7 @@ import MenuBlock from '../components/MenuBlock';
 import MerchBlock from '../components/MerchBlock';
 import BlogBlock from '../components/BlogBlock';
 import Map from '../components/Map';
+import AboutBlock from '../components/AboutBlock';
 
 import CoffeeCup from '../assets/CoffeeCup';
 import ColoredDivider from '../components/ColoredDivider';
@@ -53,8 +54,9 @@ class HomePage extends React.Component{
         <br/>
         <ColoredDivider/>
         <TextContainer>
-          <Element name="about"/>
-          <div dangerouslySetInnerHTML={{ __html: aboutSection }} className="full-width container column"/>
+          <Element name="about">
+            <AboutBlock about={aboutSection}/>
+          </Element>
         </TextContainer>
         <ColoredDivider/>
         <Element name="merchBlock">
