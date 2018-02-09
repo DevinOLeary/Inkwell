@@ -10,18 +10,22 @@ const BlogOverflow = (props) => {
     boxShadow: "1px 0px 5px",
     width: "400px",
     height: "auto",
-    margin: "5vw",
-    padding: "20px"
+    margin: "5vw"
   }
+
   const content = [];
   for (let i = 1; i < loadNumber; i++){
     let post = posts[i].node;
     let postContent = post.blogContent.childMarkdownRemark;
     let externalPost = post.externalArticle;
+    let featuredImage = post.featuredImage && post.featuredImage.file.url;
     content.push(
       <FadeIn key={post.blogTitle}>
-        <li className="container column center" style={listStyle}>
-          <h3>{post.blogTitle}</h3>
+        <li className="container column center container-article-preview" style={listStyle}>
+          {featuredImage && <img src={featuredImage} alt={post.blogTitle} className="image-featured"/>}
+          <br/>
+          <br/>
+          <h4>{post.blogTitle}</h4>
           {externalPost ? <p dangerouslySetInnerHTML={{ __html: postContent.html }}/>
             : <div><p>{postContent.excerpt}</p><a>read</a></div>
           }
