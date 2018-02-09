@@ -20,7 +20,7 @@ class HomePage extends React.Component{
     const menuContentNodes = this.props.data.allContentfulMenuCategory.edges;
     const merchContentNodes = this.props.data.allContentfulMerchItem.edges;
     const headerImage = this.props.data.allContentfulHeaderImage.edges.map((node) => node.node.image.file.url);
-    const aboutSection = this.props.data.allContentfulAboutSection.edges.map((node) => node.node.sectionContent.childMarkdownRemark.html);
+    const aboutSection = this.props.data.allContentfulAboutSection.edges[0].node.sectionContent.childMarkdownRemark.html;
     const blogPostNodes = this.props.data.allContentfulBlogPost.edges;
     return(
       <div>
