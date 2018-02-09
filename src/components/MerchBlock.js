@@ -20,7 +20,7 @@ const MerchBlock = (props) => {
     <li key={node.node.merchName} className="container column">
       <img src={node.node.merchImage.file.url} alt={node.node.merchName} style={imgStyle}/>
       <h4>{node.node.merchName}</h4>
-      <h4>{node.node.merchCost}</h4>
+      <h4>${node.node.merchCost}</h4>
     </li>
   ));
   return(
