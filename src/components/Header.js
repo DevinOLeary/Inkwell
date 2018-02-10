@@ -47,7 +47,7 @@ const DesktopHeader = (props) => (
         </div>)
       :
       (
-        <Media query="(min-width: 600px)">
+        <Media query="(min-width: 850px)">
           {matches =>
             matches ? (
               <div>

@@ -7,7 +7,7 @@ const Template= (props) => {
   const post = props.data.contentfulBlogPost;
   return (
     <div className="container column">
-      <Helmet title={`Your Blog Name - ${post.blogTitle}`} />
+      <Helmet title={`Inkwell Cafe - ${post.blogTitle}`} />
       <div className="container column full-width">
         <Link to={'/home/'}>back</Link>
         <h3>{post.blogTitle}</h3>

@@ -44,8 +44,8 @@ class TemplateWrapper extends React.Component {
         <Helmet
           title={this.props.data.site.siteMetadata.title}
           meta={[
-            { name: 'description', content: 'Sample' },
-            { name: 'keywords', content: 'sample, something' },
+            { name: 'description', content: 'Located in Bloomington, IN, the Inkwell Cafe uses great food, drinks, personality, and aesthetics to create the prefect atmophere to unwind and treat yourself to something great.' },
+            { name: 'keywords', content: 'cafe, coffee, breakfast, local, atmosphere, espresso, bakery' },
           ]}
         />
         {/* display header when not at root url */}

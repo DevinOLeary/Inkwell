@@ -25,7 +25,7 @@ const MenuItemList = (props) => (
           <Media query="(min-width: 700px)">
             {matches =>
               matches ?
-              <td>{props.type === 'food' ? <a href="#" onClick={props.handleFoodImage}>{item.itemName}</a> : item.itemName}</td>
+              <td>{props.type === 'food' ? <a href="#" onClick={props.handleFoodImage} className="underline">{item.itemName}</a> : item.itemName}</td>
               :
               <td>{item.itemName}</td>
             }

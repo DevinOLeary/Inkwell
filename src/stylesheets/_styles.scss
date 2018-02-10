@@ -36,7 +36,7 @@ p, li{
   font-size: 16px;
 }
 a {
-  text-decoration: underline;
+  text-decoration: none;
   color: $default;
   font-size: 18px;
 }
@@ -53,11 +53,10 @@ a:hover, button:hover {
 
 .nav-bar {
   background-color: $inverse;
-  .nav-menu {
-    a {
-      text-decoration: none;
-    }
-  }
+}
+
+.underline {
+  text-decoration: underline;
 }
 
 //features

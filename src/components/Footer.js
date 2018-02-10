@@ -5,6 +5,8 @@ import Logo from '../components/Logo';
 import Facebook from '../assets/Facebook_Color.png';
 import Instagram from '../assets/Instagram_Color.png';
 import Mail from '../assets/mail.png';
+import Location from '../assets/location-emblem.png';
+import Phone from '../assets/phone-emblem.png';
 
 import StoreHours from './StoreHours';
 
@@ -37,10 +39,12 @@ const hoursHeader = {
 
 const phoneAddress = (
   <div className="text-center" style={footerItemWidth}>
+    <img src={Phone} alt="Phone" style={socialLinks}/>
     <a href="tel:+8128222925"><h4>(812) 822-2925</h4></a>
     <br/>
-    <a href="https://www.google.com/maps/place/105+N+College+Ave,+Bloomington,+IN+47404/data=!4m2!3m1!1s0x886c66de7482a3cd:0xc861f75e9711c78a?sa=X&ved=0ahUKEwishO65vM7YAhXl4IMKHSlzCxwQ8gEIKDAA" target="_blank" rel="noopener noreferrer"><address><h4>105 N. College Ave.
-Bloomington, Indiana 47404</h4></address></a>
+    <img src={Location} alt="Location" style={socialLinks}/>
+    <a href="https://www.google.com/maps/place/105+N+College+Ave,+Bloomington,+IN+47404/data=!4m2!3m1!1s0x886c66de7482a3cd:0xc861f75e9711c78a?sa=X&ved=0ahUKEwishO65vM7YAhXl4IMKHSlzCxwQ8gEIKDAA" target="_blank" rel="noopener noreferrer"><address><h4>105 N. College Ave.<br/>
+Bloomington, Indiana <br/> 47404</h4></address></a>
   </div>
 );
 

@@ -29,8 +29,7 @@ const MerchBlock = (props) => {
         {merchList}
       </ul>
       <br/>
-      <br/>
-      <button className="button-action">view more merch</button>
+      <h4>- please inquire in shop to purchase</h4>
     </div>
   );
 }
