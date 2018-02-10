@@ -1,7 +1,8 @@
 import React from 'react';
 import Media from 'react-media';
 
-import Logo from '../components/Logo';
+import Logo from './Logo';
+import ColoredDivider from './ColoredDivider';
 import Facebook from '../assets/Facebook_Color.png';
 import Instagram from '../assets/Instagram_Color.png';
 import Mail from '../assets/mail.png';
@@ -34,8 +35,9 @@ const footerContainer = {
 }
 const hoursHeader = {
   textDecoration: 'underline',
-  marginBottom: '5px'
+  margin: '0px'
 }
+
 
 const phoneAddress = (
   <div className="text-center" style={footerItemWidth}>
@@ -62,6 +64,7 @@ const storeHours = (
 const inkwellLogo = (data) => (
   <div className="text-center container column" style={footerItemWidth}>
     <Logo style={footerLogo}/>
+    <ColoredDivider/>
     <h2>{data.site.siteMetadata.title}</h2>
     <ul className="container row">
       <a href="https://www.facebook.com/inkwellbtown/" target="_blank" rel="noopener noreferrer"><li><img src={Facebook} alt="Facebook" style={socialLinks}/></li></a>
