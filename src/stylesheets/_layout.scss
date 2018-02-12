@@ -110,7 +110,16 @@ table {
   height: 30%;
 }
 
-
+.post-markdown {
+  p {
+    img {
+      width:50vw;
+      max-width: 500px;
+      min-width: 300px;
+      margin:20px;
+    }
+  }
+}
 
 .floating-underline {
   position: absolute;

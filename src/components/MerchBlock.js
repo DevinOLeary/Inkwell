@@ -21,6 +21,7 @@ const MerchBlock = (props) => {
       <img src={node.node.merchImage.file.url} alt={node.node.merchName} style={imgStyle}/>
       <h4>{node.node.merchName}</h4>
       <h4>${node.node.merchCost}</h4>
+      {node.node.merchDescription.childMarkdownRemark.html && <p dangerouslySetInnerHTML={{ __html: node.node.merchDescription.childMarkdownRemark.html }}/>}
     </li>
   ));
   return(

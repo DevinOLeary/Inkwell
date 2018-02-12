@@ -132,6 +132,11 @@ export const query = graphql `
         node {
           merchName
           merchCost
+          merchDescription{
+            childMarkdownRemark{
+              html
+            }
+          }
           merchImage {
             file {
               url

@@ -20,19 +20,19 @@ const MenuItemList = (props) => (
       </tr>
     </thead>
     <tbody className="container center column">
-      {props.items.map((item) => (
-        <tr key={item.itemName}>
+      {props.items.map((item) => {
+      return  <tr key={item.itemName}>
           <Media query="(min-width: 700px)">
             {matches =>
               matches ?
-              <td>{props.type === 'food' ? <a href="#" onClick={props.handleFoodImage} className="underline">{item.itemName}</a> : item.itemName}</td>
+              <td>{props.type === 'food' && item.itemImage.file.url ? <a href="#" onClick={props.handleFoodImage} className="underline">{item.itemName}</a> : item.itemName}</td>
               :
               <td>{item.itemName}</td>
             }
           </Media>
           <td>{!props.subheader && `$`}{item.itemCost}</td>
         </tr>
-      ))}
+      })}
     </tbody>
   </table>
 );

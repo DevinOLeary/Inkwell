@@ -90,6 +90,15 @@ a:hover, button:hover {
   color: $purple;
 }
 
+.line-colored {
+  width: 50%;
+  margin-top: 40px;
+  border: 2px solid transparent;
+	border-image: $gradient;
+	border-image-slice: 1;
+  border-radius: 100px;
+}
+
 
 
 
