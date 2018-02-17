@@ -66,7 +66,7 @@ class MenuBlock extends React.Component {
       <div className="container center row full-width">
         <Media query="(min-width: 700px)">
           {matches =>
-            matches && <MenuImage activeImage={activeImage}/>
+            matches ? <MenuImage activeImage={activeImage}/> : <span/>
           }
         </Media>
         <section className="container center column" style={menuContainer} >
