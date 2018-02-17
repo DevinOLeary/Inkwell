@@ -65,7 +65,7 @@ class MenuBlock extends React.Component {
 
     return(
       <div className="container center row full-width">
-        <MediaQuery minDeviceWidth={700}>
+        <MediaQuery minWidth={700}>
           <MenuImage activeImage={activeImage}/>
         </MediaQuery>
         <section className="container center column" style={menuContainer} >
