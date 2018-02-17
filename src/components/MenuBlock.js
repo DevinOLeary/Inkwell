@@ -1,5 +1,6 @@
 import React from 'react';
 import Media from 'react-media';
+import MediaQuery from 'react-responsive';
 import {TransitionGroup} from 'react-transition-group';
 
 import drinkImage from '../assets/Inkwell-drink.jpg';
@@ -64,11 +65,9 @@ class MenuBlock extends React.Component {
 
     return(
       <div className="container center row full-width">
-        <Media query="(min-width: 700px)">
-          {matches =>
-            matches ? <MenuImage activeImage={activeImage}/> : <span/>
-          }
-        </Media>
+        <MediaQuery minDeviceWidth={700}>
+          <MenuImage activeImage={activeImage}/>
+        </MediaQuery>
         <section className="container center column" style={menuContainer} >
           <div className="container column center">
             <hgroup className="container center section-header" style={buttonContainer}>
