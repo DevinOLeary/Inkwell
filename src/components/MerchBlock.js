@@ -7,6 +7,10 @@ const merchContainer = {
   padding: '5vw 0px'
 }
 
+const merchItem = {
+  margin: "20px"
+}
+
 const imgStyle = {
   width: '20vw',
   height: '20vw',
@@ -17,16 +21,16 @@ const imgStyle = {
 
 const MerchBlock = (props) => {
   const merchList = props.items.map((node) => (
-    <li key={node.node.merchName} className="container column">
-      <img src={node.node.merchImage.file.url} alt={node.node.merchName} style={imgStyle}/>
+    <li key={node.node.merchName} className="container column" style={merchItem}>
+      {node.node.merchImage && <img src={node.node.merchImage.file.url} alt={node.node.merchName} style={imgStyle}/>}
       <h4>{node.node.merchName}</h4>
       <h4>${node.node.merchCost}</h4>
-      {node.node.merchDescription.childMarkdownRemark.html && <p dangerouslySetInnerHTML={{ __html: node.node.merchDescription.childMarkdownRemark.html }}/>}
+      {node.node.merchDescription && <p dangerouslySetInnerHTML={{ __html: node.node.merchDescription.childMarkdownRemark.html }}/>}
     </li>
   ));
   return(
     <div style={merchContainer} className="container center column">
-      <ul>
+      <ul className="container row">
         {merchList}
       </ul>
       <br/>
