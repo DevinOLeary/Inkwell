@@ -41,12 +41,12 @@ const hoursHeader = {
 
 const phoneAddress = (
   <div className="text-center" style={footerItemWidth}>
-    <a href="tel:+8128222925">
+    <a href="tel:+8128222925" className="no-decoration">
       <img src={Phone} alt="Phone" style={socialLinks}/>
       <h4>(812) 822-2925</h4>
     </a>
     <br/>
-    <a href="https://www.google.com/maps/place/105+N+College+Ave,+Bloomington,+IN+47404/data=!4m2!3m1!1s0x886c66de7482a3cd:0xc861f75e9711c78a?sa=X&ved=0ahUKEwishO65vM7YAhXl4IMKHSlzCxwQ8gEIKDAA" target="_blank" rel="noopener noreferrer">
+    <a href="https://www.google.com/maps/place/105+N+College+Ave,+Bloomington,+IN+47404/data=!4m2!3m1!1s0x886c66de7482a3cd:0xc861f75e9711c78a?sa=X&ved=0ahUKEwishO65vM7YAhXl4IMKHSlzCxwQ8gEIKDAA" target="_blank" rel="noopener noreferrer" className="no-decoration">
       <img src={Location} alt="Location" style={socialLinks}/>
       <address><h4>105 N. College Ave.<br/>
       Bloomington, Indiana <br/> 47404</h4></address>
